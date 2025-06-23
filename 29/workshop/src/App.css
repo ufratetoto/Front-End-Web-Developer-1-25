@@ -1,0 +1,33 @@
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+}
+
+.title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card img:hover {
+  /* create a shadow effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
