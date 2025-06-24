@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi Flexbox - Soluzioni Omnicomprensive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* Stili comuni per i contenitori */
+        .exercise-container {
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin-bottom: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        /* --- Esercizio 1: Centrare un Blocco --- */
+        .flex-container-1 {
+            display: flex; /* Attiva Flexbox */
+            justify-content: center; /* Centra orizzontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 200px; /* Altezza per visualizzare la centratura */
+            background-color: #e0f7fa;
+            border: 1px dashed #00bcd4;
+        }
+
+        .flex-item-1 {
+            background-color: #2196f3;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* --- Esercizio 2: Navbar Flessibile --- */
+        .flex-navbar {
+            display: flex; /* Attiva Flexbox */
+            justify-content: space-around; /* Spazia gli elementi equamente */
+            background-color: #4CAF50;
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+
+        .flex-navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .flex-navbar a:hover {
+            background-color: #45a049;
+            border-radius: 3px;
+        }
+
+        /* --- Esercizio 3: Layout su più Righe (Gallery Semplice) --- */
+        .flex-gallery-container {
+            display: flex; /* Attiva Flexbox */
+            flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+            gap: 10px; /* Spazio tra gli elementi */
+            background-color: #f1f8e9;
+            padding: 10px;
+            border: 1px dashed #8bc34a;
+        }
+
+        .flex-gallery-item {
+            background-color: #c8e6c9;
+            border: 1px solid #81c784;
+            padding: 20px;
+            flex: 1 1 calc(33% - 20px); /* Base per 3 colonne con gap */
+            min-width: 120px; /* Larghezza minima per evitare compressione eccessiva */
+            box-sizing: border-box; /* Include padding e border nella larghezza */
+            text-align: center;
+        }
+
+        /* Media Query per layout responsivo dell'esercizio 3 */
+        @media (max-width: 768px) {
+            .flex-gallery-item {
+                flex: 1 1 calc(50% - 20px); /* 2 colonne su schermi medi */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flex-gallery-item {
+                flex: 1 1 100%; /* 1 colonna su schermi piccoli */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Soluzioni Esercizi Flexbox</h1>
+
+    <div class="exercise-container">
+        <h2>Esercizio 1: Centrare un Blocco</h2>
+        <div class="flex-container-1">
+          <div class="flex-item-1">Sono centrato!</div>
+        </div>
+    </div>
+
+    <div class="exercise-container">
+        <h2>Esercizio 2: Navbar Flessibile</h2>
+        <nav class="flex-navbar">
+          <a href="#">Home</a>
+          <a href="#">Chi Siamo</a>
+          <a href="#">Servizi</a>
+          <a href="#">Contatti</a>
+        </nav>
+    </div>
+
+    <div class="exercise-container">
+        <h2>Esercizio 3: Layout su più Righe (Gallery Semplice)</h2>
+        <div class="flex-gallery-container">
+          <div class="flex-gallery-item">Foto 1</div>
+          <div class="flex-gallery-item">Foto 2</div>
+          <div class="flex-gallery-item">Foto 3</div>
+          <div class="flex-gallery-item">Foto 4</div>
+          <div class="flex-gallery-item">Foto 5</div>
+          <div class="flex-gallery-item">Foto 6</div>
+        </div>
+    </div>
+
+</body>
+</html>

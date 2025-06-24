@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi CSS Grid - Soluzioni Omnicomprensive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* Stili comuni per i contenitori */
+        .exercise-container {
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin-bottom: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        /* Stili comuni per gli elementi delle griglie */
+        .grid-item {
+            background-color: #bbdefb;
+            border: 1px solid #64b5f6;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            box-sizing: border-box; /* Include padding e border nella larghezza */
+        }
+
+        /* --- Esercizio 1: Griglia 3x3 Semplice --- */
+        .grid-container-1 {
+            display: grid; /* Attiva Grid */
+            grid-template-columns: repeat(3, 1fr); /* 3 colonne di uguale larghezza */
+            grid-template-rows: repeat(3, 100px); /* 3 righe da 100px di altezza */
+            gap: 10px; /* Spazio tra le celle */
+            background-color: #e3f2fd;
+            border: 1px dashed #2196f3;
+        }
+
+        /* --- Esercizio 2: Layout Base (Header, Main, Sidebar, Footer) --- */
+        .grid-layout-2 {
+            display: grid; /* Attiva Grid */
+            grid-template-columns: 2fr 1fr; /* Due colonne: una larga il doppio dell'altra */
+            grid-template-rows: auto 1fr auto; /* Header e footer automatici, main che occupa lo spazio rimanente */
+            grid-template-areas:
+                "header header"
+                "main sidebar"
+                "footer footer"; /* Definisce le aree della griglia */
+            gap: 15px;
+            height: 400px; /* Altezza per visualizzare il layout */
+            background-color: #fce4ec;
+            border: 1px dashed #e91e63;
+        }
+
+        .grid-header {
+            grid-area: header; /* Assegna all'area 'header' */
+            background-color: #f06292;
+            color: white;
+            padding: 20px;
+        }
+
+        .grid-main {
+            grid-area: main; /* Assegna all'area 'main' */
+            background-color: #ffebee;
+            padding: 20px;
+        }
+
+        .grid-sidebar {
+            grid-area: sidebar; /* Assegna all'area 'sidebar' */
+            background-color: #f8bbd0;
+            padding: 20px;
+        }
+
+        .grid-footer {
+            grid-area: footer; /* Assegna all'area 'footer' */
+            background-color: #f06292;
+            color: white;
+            padding: 20px;
+        }
+
+        /* --- Esercizio 3: Elementi che Si Estendono --- */
+        .grid-container-3 {
+            display: grid; /* Attiva Grid */
+            grid-template-columns: repeat(3, 1fr); /* 3 colonne uguali */
+            grid-template-rows: repeat(2, 100px); /* 2 righe da 100px */
+            gap: 10px;
+            background-color: #e8f5e9;
+            border: 1px dashed #4caf50;
+        }
+
+        .item-a {
+            grid-column: 1 / span 3; /* Parte dalla colonna 1 e si estende per 3 colonne */
+            background-color: #66bb6a;
+            color: white;
+        }
+
+        .item-b {
+            background-color: #a5d6a7;
+        }
+
+        .item-c {
+            background-color: #a5d6a7;
+        }
+
+        .item-d {
+            grid-column: span 2; /* Si estende per 2 colonne, partendo da dove è posizionata */
+            background-color: #66bb6a;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Soluzioni Esercizi CSS Grid</h1>
+
+    <div class="exercise-container">
+        <h2>Esercizio 1: Griglia 3x3 Semplice</h2>
+        <div class="grid-container-1">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <div class="grid-item">5</div>
+          <div class="grid-item">6</div>
+          <div class="grid-item">7</div>
+          <div class="grid-item">8</div>
+          <div class="grid-item">9</div>
+        </div>
+    </div>
+
+    <div class="exercise-container">
+        <h2>Esercizio 2: Layout Base (Header, Main, Sidebar, Footer)</h2>
+        <div class="grid-layout-2">
+          <header class="grid-header">Header</header>
+          <main class="grid-main">Contenuto Principale</main>
+          <aside class="grid-sidebar">Sidebar</aside>
+          <footer class="grid-footer">Footer</footer>
+        </div>
+    </div>
+
+    <div class="exercise-container">
+        <h2>Esercizio 3: Elementi che Si Estendono</h2>
+        <div class="grid-container-3">
+          <div class="item-a">A (si estende su 3 colonne)</div>
+          <div class="item-b">B</div>
+          <div class="item-c">C</div>
+          <div class="item-d">D (si estende su 2 colonne)</div>
+        </div>
+    </div>
+
+</body>
+</html>
