@@ -44,6 +44,36 @@ function App () {
           </MusaButton>
         </MusaCol>
       </MusaRow>
+      <MusaRow>
+        <MusaCol lg={6} >
+          <p>Prova</p>
+        </MusaCol>
+        <MusaCol lg={6} >
+          <p>Prova</p>
+        </MusaCol>
+      </MusaRow>
+      <MusaRow>
+        <MusaCol lg={3} >
+          <p>Prova</p>
+        </MusaCol>
+        <MusaCol lg={3} >
+          <p>Prova</p>
+        </MusaCol>
+        <MusaCol lg={3} >
+          <p>Prova</p>
+        </MusaCol>
+        <MusaCol lg={3} >
+          <p>Prova</p>
+        </MusaCol>
+      </MusaRow>
+      <MusaRow>
+        <MusaCol xl={4} className='bordered'>
+          Sidebar
+        </MusaCol>
+        <MusaCol xl={8} className='bordered'>
+          contenuto
+        </MusaCol>
+      </MusaRow>
     </MusaContainer>
   )
 }
