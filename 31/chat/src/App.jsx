@@ -2,30 +2,30 @@ import { useState, useRef } from 'react'
 
 import './App.css'
 
-function Chat({children}) {
-  return <div className="chat"> {children} </div>
+function Chat({messaggi}) {
+  if (!messaggi || messaggi.length === 0) {
+    return <div className="chat"></div>
+  }
+  return <div className="chat">
+    { messaggi.map( (m, i) => <p key={i}>{m}</p> ) }
+  </div>
 }
 
-
 function App() {
-  const [messaggi, setMessaggi] = useState('')
+  const [messaggi, setMessaggi] = useState([''])
   const messaggio = useRef(null)
 
   const addMessaggio = () => {
-    if (messaggio.current) {
+    if (messaggio.current && messaggio.current.value) {
       const nuovoMessaggio = messaggio.current.value
-      if (nuovoMessaggio.trim() !== '') {
-        setMessaggi(messaggi + "<br>"+ nuovoMessaggio)
-        messaggio.current.value = ''
-      }
+      setMessaggi([...messaggi,nuovoMessaggio])
+      messaggio.current.value = ''
     }
   }
 
   return <>
-    <Chat>
-      {messaggi}
-    </Chat>
-    <div>
+    <Chat messaggi={messaggi} />
+    <div className="messaggio">
       <input type='text' ref={messaggio} />
       <button onClick={addMessaggio}>Invia</button>
     </div>
