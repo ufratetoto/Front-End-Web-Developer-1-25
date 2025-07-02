@@ -1,0 +1,64 @@
+/* Applichiamo Flexbox alla navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Spazio tra gli elementi principali */
+  align-items: center; /* Allinea verticalmente gli elementi */
+  padding: 10px 20px; /* Aggiungi un po' di padding */
+  background-color: #f8f9fa; /* Puoi anche cambiare il colore di sfondo */
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 20px; /* Spazio tra le voci di navigazione */
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+}
+
+.navbar-toggler {
+  display: none; /* Nascondi il toggler, lo useremo solo per mobile */
+}
+
+.form-control {
+  margin-right: 10px;
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-toggler {
+    display: block;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
