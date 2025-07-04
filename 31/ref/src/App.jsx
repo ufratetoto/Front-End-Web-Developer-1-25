@@ -1,6 +1,17 @@
 import { useState, useRef } from 'react'
 import './App.css'
 
+// Esempio di implementazione di useState
+// let state
+// const updateState = (val) =>{
+//   state = val
+// }
+// const gabState = (val) => {
+//   return [state, gabUpdateState]
+// }
+
+// const [giocatore, setGiocatore] = gabState('Gabriele');
+
 function App() {
   const nameRef = useRef(null);
   const [name, setName] = useState(''); // Useremo lo stato per aggiornare il saluto
