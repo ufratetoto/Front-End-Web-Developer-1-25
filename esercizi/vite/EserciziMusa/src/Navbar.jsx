@@ -1,18 +1,14 @@
-import { React } from 'react'
-import musaLogo from './assets/musa.svg';
+import './Navbar.css';
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="container">
-        <a className="navbar-brand" href="#">Navbar</a>
+    <nav className="navbar navbar-expand-lg">
+        <a className="navbar-brand" href="#">Nav-bar</a>
 
-        {/* Toggler per il menu su mobile */}
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Menu che si espande o si contrae */}
         <div className="navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav">
             <li className="nav-item">
@@ -34,15 +30,13 @@ function Navbar() {
             </li>
           </ul>
 
-          {/* Barra di ricerca */}
           <form className="d-flex" role="search">
             <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
-      </div>
     </nav>
   );
 }
 
-export default Navbar;
+export default Navbar

@@ -1,5 +1,5 @@
 #rooot {
-  max-width: 1280px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -30,7 +30,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logomusa {
-    animation: logo-spin infinite 35s linear;
+    animation: logo-spin infinite 35ms linear;
   }
 }
 
