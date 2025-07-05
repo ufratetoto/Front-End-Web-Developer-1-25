@@ -9,11 +9,11 @@ function Esercizio() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logomusa" alt="Vite logo" />
-        </a>
         <a href="https://musaformazione.it" target="_blank">
           <img src={musaLogo} className="logo musa" alt="Musa logo" />
+        </a>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
       <h2>Le mie modifiche ai file originali</h2>

@@ -2,12 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  padding: 5px 20px;
+  padding: 5px 30px;
   background-color: #f8f9fa; 
 }
 
 .navbar-brand {
   font-size: 24px;
+  
+}
+.navbar-brand img {
+  height: 40px; /* Altezza dell'immagine del logo */
+  width: auto; /* Mantiene le proporzioni dell'immagine */
+  transition: filter 300ms;
+  margin-left: 0.5em;
 }
 
 .navbar-collapse {
