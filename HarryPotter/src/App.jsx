@@ -2,7 +2,7 @@ import {useState} from 'react'
 import { getBooksMock } from './Services/Characters'
 
 import { MusaContainer, MusaRow } from './Components/MusaLayout/' // notare import da index.jsx
-import { MusaTitle } from './Components/MusaTitle'
+import MusaTitle from './Components/MusaTitle'
 import HPBook from './Components/HPBook'
 
 import './App.css'
