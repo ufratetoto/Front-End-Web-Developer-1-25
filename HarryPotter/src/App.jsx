@@ -1,11 +1,11 @@
 import {useState} from 'react'
+import { getBooksMock } from './Services/Characters'
 
 import { MusaContainer, MusaRow } from './Components/MusaLayout/' // notare import da index.jsx
-import { getBooksMock } from './Services/Characters'
+import { MusaTitle } from './Components/MusaTitle'
 import HPBook from './Components/HPBook'
 
 import './App.css'
-import MusaTitle from '../../bootstrap/src/Components/MusaTitle'
 
 function App() {
   const [books, setBooks] = useState([])
