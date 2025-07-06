@@ -20,7 +20,7 @@ export default function Chat() {
                 className="form-control mb-3"
             />
             <p className="link-success">Il messaggio che stai scrivendo: { messaggi }</p>
-            <button onClick={resetMessaggi}>Invia!</button>
+            <button onClick={resetMessaggi}>Reset!</button>
             <div className="messaggi-list">
                 {messaggi && <p className="link-success">{messaggi}</p>}
                 
