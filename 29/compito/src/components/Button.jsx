@@ -1,6 +1,6 @@
 function Button({ children }) {
   return (
-    <button style={{ padding: '24px' }}>
+    <button style={{ padding: '24px', margin: '0.5em'}}>
       {children}
     </button>
   )
