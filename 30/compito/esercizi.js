@@ -19,7 +19,7 @@ const prezziSenzaIVA = [10, 25, 5, 120, 50]; // Prezzi in Euro
 
 console.log("Prezzi senza IVA:", prezziSenzaIVA);
 
-const prezziConIVA = prezziSenzaIVA.map(prezzo => {
+const prezziConIVA = prezziSenzaIVA.map( prezzo => {
     const iva = prezzo * 0.22;
     return prezzo + iva;
 });
@@ -37,6 +37,13 @@ const temperature = [15, 62, 30, 80, 45, 95, 20]; // Esempio di temperature
 console.log("Temperature registrate:", temperature);
 
 const temperatureElevate = temperature.filter(temp => temp > 50);
+// const temperatureElevateEstesa =
+//   temperature.filter( (temp) => {
+//     if (temp > 50) {
+//       return true;
+//     }
+//     return false;
+//   })
 
 console.log("Temperature maggiori di 50:", temperatureElevate);
 console.log("\n");
@@ -48,11 +55,12 @@ console.log("\n");
 console.log("--- Esercizio 4: reduce() ---");
 const carrello = [15.50, 8.20, 30.00, 2.75, 12.90]; // Prezzi degli articoli
 
-console.log("Articoli nel carrello:", carrello);
+console.log("Articoli nel carrello:\t", carrello);
 
-const totaleCarrello = carrello.reduce((sommaParziale, prezzoArticolo) => sommaParziale + prezzoArticolo, 0); // Inizia la somma da 0
+const totaleCarrello = carrello.reduce(
+  (sommaParziale, prezzoArticolo) => sommaParziale + prezzoArticolo, 0.0); // Inizia la somma da 0
 
-console.log("Totale da pagare:", totaleCarrello + "€");
+console.log("Totale da pagare:\t", totaleCarrello + "€");
 console.log("\n");
 
 
@@ -70,10 +78,8 @@ const prodotto = {
 
 console.log("Caratteristiche Prodotto:");
 for (let caratteristica in prodotto) {
-    // Usiamo .hasOwnProperty per assicurarci che la proprietà sia propria dell'oggetto e non ereditata
-    if (prodotto.hasOwnProperty(caratteristica)) {
-        console.log(`${caratteristica}: ${prodotto[caratteristica]}`);
-    }
+  // prodotto[caratteristica] equivale a fare prodotto['marca'] o prodotto['colore']
+  console.log(`${caratteristica}: ${prodotto[caratteristica]}`);
 }
 console.log("\n");
 
@@ -83,15 +89,23 @@ console.log("\n");
 
 console.log("--- Esercizio 6: for...of ---");
 const coloriDisponibili = ["rosso", "blu", "verde", "giallo"];
-const parolaSegreta = "codice";
 
 console.log("Elenco Colori Disponibili:");
 for (let colore of coloriDisponibili) {
-    console.log(`- ${colore}`);
+  console.log(`- ${colore}`);
 }
 
+const parolaSegreta = "codice";
 console.log("\nLettere della Parola Segreta:");
 for (let lettera of parolaSegreta) {
     console.log(`Lettera: ${lettera}`);
 }
 console.log("\n");
+
+
+/// Esempio arrow function complessa
+// const processaNuova = ( { propA, propB }) => ({ propA, propB, unione: propA+propB })
+
+// const res = processaNuova({propA: 5, propB: 6 })
+
+// console.log(res)
